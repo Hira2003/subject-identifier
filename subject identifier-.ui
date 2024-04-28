@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>757</width>
+    <height>492</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(160, 251, 255);</string>
+  </property>
+  <widget class="QTextEdit" name="pr">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>80</y>
+     <width>531</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="scan">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>280</y>
+     <width>131</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(47, 48, 127);
+color: rgb(255, 255, 255);
+font: 14pt &quot;Modern No. 20&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Scan</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="upload">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>80</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(47, 48, 127);
+color: rgb(255, 255, 255);
+font: 14pt &quot;Modern No. 20&quot;;</string>
+   </property>
+   <property name="text">
+    <string>upload</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="result">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>370</y>
+     <width>531</width>
+     <height>91</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(47, 48, 127);
+color: rgb(255, 255, 255);
+font: 14pt &quot;Modern No. 20&quot;;</string>
+   </property>
+   <property name="text">
+    <string>result</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>630</x>
+     <y>150</y>
+     <width>101</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap resource="ji.qrc">:/nn/book.png</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>20</y>
+     <width>431</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 36pt &quot;Modern No. 20&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Subject Identifier</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>680</x>
+     <y>440</y>
+     <width>71</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(47, 48, 127);
+color: rgb(255, 255, 255);
+font: 14pt &quot;Modern No. 20&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="ji.qrc"/>
+ </resources>
+ <connections/>
+</ui>
