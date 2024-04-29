@@ -1,40 +1,43 @@
 import sys
-from PyQt5.uic import loadUi
+
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication,QDialog,QMessageBox,QTableWidgetItem
 from PyQt5.QtGui import QPixmap
+from PyQt5.QtWidgets import QApplication, QDialog
+from PyQt5.uic import loadUi
 from transformers import pipeline
 
+
 class idn(QDialog):
-  def __init__(self):
-    super(idn, self).__init__()
-    loadUi("subject identifier-.ui", self)
-    self.scan.clicked.connect(self.process)
-    self.label_2.setPixmap(QPixmap('book.png'))
-    self.exit.clicked.connect(self.exiti)
-  def exiti(self):
-    sys.exit()
-  def process(self):
-    classifier = pipeline("zero-shot-classification")
+	def __init__(self):
+		super(idn, self).__init__()
+		loadUi("subject identifier-.ui", self)
+		self.scan.clicked.connect(self.process)
+		self.label_2.setPixmap(QPixmap('book.png'))
+		self.exit.clicked.connect(self.exiti)
 
-    # User input for the paragraph
-    user_paragraph = self.pr.toPlainText()
+	def exiti(self):
+		sys.exit()
 
-    # Define candidate labels representing different topics or subjects
-    candidate_labels = ["educational", "sports", "technology", "science", "business", 
-                    "politics", "entertainment", "health", "travel", "food"]  # Added labels
+	def process(self):
+		classifier = pipeline("zero-shot-classification")
 
-    # Classify the input paragraph into one of the candidate labels
-    classification_result = classifier(user_paragraph, candidate_labels)
+		# User input for the paragraph
+		user_paragraph = self.pr.toPlainText()
 
-    # Get the predicted label with the highest score
-    predicted_label = classification_result['labels'][0]
+		# Define candidate labels representing different topics or subjects
+		candidate_labels = ["educational", "sports", "technology", "science", "business",
+							"politics", "entertainment", "health", "travel", "food"]  # Added labels
 
-    # Print the predicted label
-    self.result.setText(f"Predicted Topic:   {predicted_label}")
-    
-    
-  
+		# Classify the input paragraph into one of the candidate labels
+		classification_result = classifier(user_paragraph, candidate_labels)
+
+		# Get the predicted label with the highest score
+		predicted_label = classification_result['labels'][0]
+
+		# Print the predicted label
+		self.result.setText(f"Predicted Topic:   {predicted_label}")
+
+
 window = QApplication(sys.argv)
 mainwindow = idn()
 widget = QtWidgets.QStackedWidget()
